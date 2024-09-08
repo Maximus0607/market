@@ -17,7 +17,7 @@ export function CreateProduct()
     )
     const [responseStatus,setResponseStatus]= useState('')
     async function handleCreate(){
-        await axios.post("http://127.0.0.1:60309/product/createProduct", product).then(
+        await axios.post("https://marketbackend-latest.onrender.com/product/createProduct", product).then(
             res => {
                 setResponseStatus("success");
             }

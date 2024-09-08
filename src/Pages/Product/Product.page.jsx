@@ -6,7 +6,7 @@ export function Product()
     const [responseStatus,setResponseStatus]= useState('')
 
     async function fetchProductDetails(){
-        await axios.get("http://127.0.0.1:60309/product").then(
+        await axios.get("https://marketbackend-latest.onrender.com/product").then(
             res=>{ 
                  setProductList(res.data);
                  setResponseStatus("success");

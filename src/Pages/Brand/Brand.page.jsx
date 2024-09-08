@@ -10,7 +10,7 @@ export default function Brand() {
     const {setBrand,setBrandList} =useStoreActions((actions)=> actions.brandModel)
 
     async function fetchBrandDetails() {
-        await axios.get("http://127.0.0.1:60309/brand").then(
+        await axios.get("https://marketbackend-latest.onrender.com/brand").then(
             res => {
                 setBrandList(res.data);
                 setResponseStatus("success");

@@ -82,7 +82,7 @@ const Category = () => {
 const [responseStatus,setResponseStatus]= useState('')
 
 async function fetchCategoryDetails(){
-    await axios.get("http://127.0.0.1:60309/category").then(
+    await axios.get("https://marketbackend-latest.onrender.com/category").then(
         res=>{ 
             setCategories(res.data);
              setResponseStatus("success");
