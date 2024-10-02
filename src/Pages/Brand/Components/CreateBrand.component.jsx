@@ -11,7 +11,7 @@ export function CreateBrand() {
     })
     const [responseStatus,setResponseStatus]= useState('')
     async function Create(){
-        await axios.post("https://marketbackend-latest.onrender.com/brand/createbrand",brand).then(
+        await axios.post("https://marketbackendgit.onrender.com/brand/createbrand",brand).then(
             res => {
                 setResponseStatus("success");
             }
@@ -70,7 +70,7 @@ export function CreateBrand() {
             }}>Create</button></div>
             <div className="col-3" style={{
                 "textAlign": "center"
-            }}><button className="btn btn-danger" type="button" style={{
+            }}><button className="btn btn-danger" type="button" onClick={()=> navigate("/brand")} style={{
                 "textAlign": "center"
             }}>cancel</button></div>
         </div>

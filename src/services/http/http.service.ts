@@ -10,12 +10,12 @@ async delete<T>(url: string): Promise<T>{
 }
 
 async get<T>(url: string): Promise<T>{
-    return axios.get("https://marketbackend-latest.onrender.com"+url).then((axiosResponse)=>{
+    return axios.get("https://marketbackendgit.onrender.com"+url).then((axiosResponse)=>{
     return axiosResponse.data as T;
 });
 }
 async post<T>(url: string,body: unknown): Promise<T>{
-    return axios.post("https://marketbackend-latest.onrender.com"+url,JSON.stringify(body)).then((axiosResponse)=>{
+    return axios.post("https://marketbackendgit.onrender.com"+url,JSON.stringify(body)).then((axiosResponse)=>{
     return axiosResponse.data as T;
 });
 }
