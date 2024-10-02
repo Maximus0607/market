@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function Brand() {
     // const [brandList, setBrandList] = useState([])
     const [responseStatus, setResponseStatus] = useState('')
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
     const {brand,brandList}=useStoreState((state)=> state.brandModel);
 
@@ -36,7 +36,7 @@ export default function Brand() {
                     <h1 className="text-secondary-emphasis">Brand Details</h1>
                 </div>
                 <div className="col text-end align-self-center">
-                    <a className="btn btn-outline-info btn-lg" role="button" onClick={()=>navigate("brand/createbrand")}>Create New Brand</a></div>
+                    <a className="btn btn-outline-info btn-lg" role="button" onClick={()=>navigate("createbrand")}>Create New Brand</a></div>
             </div>
             {responseStatus === "failed" ? <h1> Not able to fetch brand details</h1> :
                 <div className="row gy-4 row-cols-1 row-cols-sm-2 row-cols-lg-3 mb-3">
