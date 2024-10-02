@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react'
 import axios from "axios";
 import { useStoreState,useStoreActions } from "../../store/hooks.ts";
+import { useNavigate } from 'react-router-dom';
 const Category = () => {
     const {brand,brandList}=useStoreState((state)=> state.brandModel);
-
+    const navigate = useNavigate();
     const {setBrand,setBrandList} =useStoreActions((actions)=> actions.brandModel)
  const [categories,setCategories] = useState([])
 const [responseStatus,setResponseStatus]= useState('')
@@ -37,7 +38,7 @@ useEffect(()=>{
                 <h2>Category</h2>
                 <p className="w-lg-50">Here You can find the groups of products that meet a similar consumer need or that can substitute for each</p>
             </div>
-            <div className="col-auto col-md-8 col-xl-1 text-center align-self-center" style={{ marginRight:"0px", }}><a className="btn btn-outline-info btn-lg" role="button" href="/category/createCategory">Create New Category</a></div>
+            <div className="col-auto col-md-8 col-xl-1 text-center align-self-center" style={{ marginRight:"0px", }}><a className="btn btn-outline-info btn-lg" role="button" onClick={()=> navigate("/category/createCategory")}>Create New Category</a></div>
         </div>
         
         <div className="row gx-2 gy-2 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox="">
